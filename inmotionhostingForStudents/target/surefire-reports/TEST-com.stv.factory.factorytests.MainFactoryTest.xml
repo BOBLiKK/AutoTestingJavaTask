@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.stv.factory.factorytests.MainFactoryTest" time="0.302" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.3+7-LTS-152"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\tatti\students_course_2025(24)\immotionhostingForStudentsGit_2025\inmotionhosting_framework_for_students\immotionhostingForStudentsGit_2025\inmotionhostingForStudents"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="MainFactoryTest#assertMainLogoIsDisplayed"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\tatti\students_course_2025(24)\immotionhostingForStudentsGit_2025\inmotionhosting_framework_for_students\immotionhostingForStudentsGit_2025\inmotionhostingForStudents"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\tati\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="cp866"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\maven\apache-maven-3.8.2\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="stdout.encoding" value="cp866"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath_;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\maven\apache-maven-3.8.2\bin;C:\chromedriver;C:\Program Files\Java\jdk-21\bin;C:\Python311\Scripts;C:\Python311;C:\ProgramData\chocolatey\bin;C:\drivers;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;D:\allure\allure-2.29.0\bin;C:\Users\tati\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2\bin;;C:\Program Files\JetBrains\PyCharm 2023.2\bin;;C:\Users\tati\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\maven\apache-maven-3.8.2/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\tati"/>
+    <property name="user.timezone" value="Europe/Minsk"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="tati"/>
+    <property name="java.class.path" value="C:\maven\apache-maven-3.8.2\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=MainFactoryTest#assertMainLogoIsDisplayed test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\maven\apache-maven-3.8.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.stv.factory.factorytests.MainFactoryTest" name="assertMainLogoIsDisplayed" time="0.302"/>
+</testsuite>
