@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 public class HomePage extends BasePage {
 
     private static final String BASE_URL = "https://www.inmotionhosting.com/";
+    private static final String WEB_HOSTING_PATH = "/web-hosting";
     private static final Pattern PRICE_PATTERN = Pattern.compile("\\$\\s*\\d+(?:\\.\\d+)?");
 
     @FindBy(css = "button#onetrust-accept-btn-handler")
@@ -86,7 +87,7 @@ public class HomePage extends BasePage {
             }
         }
 
-        driver.navigate().to("https://www.inmotionhosting.com/web-hosting");
+        driver.navigate().to(BASE_URL + WEB_HOSTING_PATH);
         return new WebHostingPage(driver);
     }
 
