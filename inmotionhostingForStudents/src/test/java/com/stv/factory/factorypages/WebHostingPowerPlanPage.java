@@ -1,6 +1,5 @@
 package com.stv.factory.factorypages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +33,7 @@ public class WebHostingPowerPlanPage extends BasePage {
     )
     private WebElement powerSelectBtn;
 
-    // Optional cookie banner accept (safe)
+    // Optional cookie banner accept
     @FindBy(css = "button[id*='accept'], button[aria-label*='Accept']")
     private WebElement cookieAcceptBtn;
 
@@ -58,12 +57,12 @@ public class WebHostingPowerPlanPage extends BasePage {
 
         WebElement btn = powerSelectBtn;
 
-        // Scroll to button (centered)
+        // Scroll to button
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView({block:'center'});", btn);
 
         try {
-            // Normal Selenium click (preferred)
+            // Normal Selenium click
             waitUntilClickable(btn).click();
         } catch (Exception e) {
             // Fallback: JS click (handles overlays / non-interactable cases)
@@ -71,7 +70,6 @@ public class WebHostingPowerPlanPage extends BasePage {
                     .executeScript("arguments[0].click();", btn);
         }
     }
-
 
     private void acceptCookiesIfPresent() {
         try {
@@ -82,16 +80,9 @@ public class WebHostingPowerPlanPage extends BasePage {
         }
     }
 
-
     private void waitUntilVisible(WebElement element) {
         new WebDriverWait(driver, WAIT_TIMEOUT)
                 .until(ExpectedConditions.visibilityOf(element));
-    }
-
-
-    private WebElement waitUntilPresent(By locator) {
-        return new WebDriverWait(driver, WAIT_TIMEOUT)
-                .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     private WebElement waitUntilClickable(WebElement el) {
