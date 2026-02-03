@@ -1,27 +1,42 @@
 package com.stv.factory.factorypages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CheckoutPage extends BasePage {
 
 
-    //Task 7
+    @FindBy(css = "select")
+    private WebElement billingSelect;
 
-    private final By billingTermOptions = By.cssSelector("select option");
+    @FindBy(css = "select option")
+    private List<WebElement> billingOptions;
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
     }
 
-    public boolean billingDropdownContains(String fragment) {
-        List<String> texts = driver.findElements(billingTermOptions)
-                .stream()
-                .map(e -> e.getText().replaceAll("\\s+", " ").trim())
-                .toList();
+    public List<String> getBillingOptionsText() {
+        waitVisible(billingSelect);
 
-        return texts.stream().anyMatch(t -> t.contains(fragment));
+
+        try { click(billingSelect); } catch (Exception ignored) {}
+
+        wait.until(d -> billingOptions != null && !billingOptions.isEmpty());
+
+        return billingOptions.stream()
+                .map(e -> safeText(e).replaceAll("\\s+", " ").trim())
+                .collect(Collectors.toList());
+    }
+
+    public boolean bugPriceFoundFor2yOr3y() {
+        List<String> options = getBillingOptionsText();
+
+        return options.stream().anyMatch(t -> t.contains("2 Years") && t.contains("$4.99"))
+                || options.stream().anyMatch(t -> t.contains("3 Years") && t.contains("$4.99"));
     }
 }
