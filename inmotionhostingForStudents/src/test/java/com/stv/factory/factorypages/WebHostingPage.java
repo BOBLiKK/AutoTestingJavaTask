@@ -1,5 +1,6 @@
 package com.stv.factory.factorypages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,15 @@ public class WebHostingPage extends BasePage {
 
     @FindBy(css = "body")
     private WebElement pageBody;
+
+    private final By explanationBy = By.xpath(
+            "//*[contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'intro') " +
+                    "or contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'term') " +
+                    "or contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'renew') " +
+                    "or contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'renews') " +
+                    "or contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'first') " +
+                    "or contains(translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'month')]"
+    );
 
     public WebHostingPage(WebDriver driver) {
         super(driver);
@@ -33,8 +43,20 @@ public class WebHostingPage extends BasePage {
         String text = safeText(pageBody);
         Matcher m = PRICE_PATTERN.matcher(text);
         if (m.find()) {
-            return m.group().replaceAll("\\s+", "");
+            String p = m.group().replaceAll("\\s+", "");
+            System.out.println("[WebHostingPage] First price on page: " + p);
+            return p;
         }
         throw new AssertionError("Could not find any $ price on Web Hosting page.");
+    }
+
+    public boolean hasExplanationForPriceDifference() {
+        try {
+            boolean present = !driver.findElements(explanationBy).isEmpty();
+            System.out.println("[WebHostingPage] Explanation present=" + present);
+            return present;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
